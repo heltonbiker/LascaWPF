@@ -1,4 +1,5 @@
 Contributors
 ==
 
-- Vinícius Kroth (ViniKroth)
+- Helton Moraes (heltonbiker)
+- VinÃ­cius Kroth (ViniKroth)
