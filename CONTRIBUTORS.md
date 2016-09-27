@@ -1,0 +1,4 @@
+Contributors
+==
+
+- Vinícius Kroth (ViniKroth)
