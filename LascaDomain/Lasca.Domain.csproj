@@ -7,10 +7,11 @@
     <ProjectGuid>{18079D3B-258C-4B06-8ACA-DE5868942931}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LascaDomain</RootNamespace>
-    <AssemblyName>LascaDomain</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Lasca.Domain</RootNamespace>
+    <AssemblyName>Lasca.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Army.cs" />
+    <Compile Include="Board.cs" />
+    <Compile Include="Piece.cs" />
+    <Compile Include="PositionEnum.cs" />
+    <Compile Include="TeamColor.cs" />
     <Compile Include="Match.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

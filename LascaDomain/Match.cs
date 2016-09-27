@@ -8,7 +8,9 @@ namespace LascaDomain
 {
 	public class Match
 	{
-		public Army Turn { get; private set; }
+		public TeamColor Turn { get; private set; }
+
+
 
 		public IEnumerable<Move> AvailableMoves
 		{
@@ -24,15 +26,15 @@ namespace LascaDomain
 		{
 			switch (Turn)
 			{
-				case Army.Black: Turn = Army.White; break;
-				case Army.White: Turn = Army.Black; break;
+				case TeamColor.Black: Turn = TeamColor.White; break;
+				case TeamColor.White: Turn = TeamColor.Black; break;
 			}
 		}
 
 		public static Match NewMatch()
 		{
 			Match board = new Match();
-			board.Turn = Army.White;
+			board.Turn = TeamColor.White;
 			return board;
 		}
 

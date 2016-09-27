@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace LascaDomain
 {
-	public enum Army
+	public class Piece
 	{
-		Black,
-		White
+		TeamColor _team;
+
+		public Piece(TeamColor team)
+		{
+			_team = team;
+		}
 	}
 }
