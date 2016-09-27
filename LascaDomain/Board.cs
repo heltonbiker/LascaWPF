@@ -1,19 +1,14 @@
-﻿using Lasca.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace LascaDomain
+namespace Lasca.Domain
 {
 	public class Board
 	{
 		List<Piece> _pieces = new List<Piece>();
 
-		public Piece Add(TeamColor teamColor, Position position)
+		public Piece AddWhite(Position position)
 		{
-			var p = new Piece(teamColor, position);
+			var p = new WhitePiece(position);
 			_pieces.Add(p);
 			return p;
 		}

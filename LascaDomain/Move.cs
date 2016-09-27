@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LascaDomain
+﻿namespace Lasca.Domain
 {
 	public class Move
 	{
@@ -14,6 +8,9 @@ namespace LascaDomain
 		{
 			this.match = match;
 		}
+
+		public Position EndPosition { get; }
+		public Position StartPosition { get; }
 
 		public void Execute()
 		{

@@ -1,11 +1,7 @@
 ﻿using Lasca.Domain;
-using LascaDomain;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LascaDomain.Tests
 {
@@ -19,36 +15,35 @@ namespace LascaDomain.Tests
 		}
 
 		[Test]
-		public void FirstTurnOfTheGameIsWite()
+		public void FirstTurnOfTheGameIsWhite()
 		{
 			var board = Match.NewMatch();
-			Assert.IsTrue(board.Turn == TeamColor.White);
+			Assert.IsTrue(board.Turn == TeamType.White);
 		}
 
 		[Test]
 		public void MovesAreMadeAlternately()
 		{
 			Match board = Match.NewMatch();
-			Assert.IsTrue(board.Turn == TeamColor.White);
+			Assert.IsTrue(board.Turn == TeamType.White);
 
 			board.AvailableMoves.First().Execute();
-			Assert.IsTrue(board.Turn == TeamColor.Black);
+			Assert.IsTrue(board.Turn == TeamType.Black);
 
 			board.AvailableMoves.First().Execute();
-			Assert.IsTrue(board.Turn == TeamColor.White);
+			Assert.IsTrue(board.Turn == TeamType.White);
 		}
 
 		[Test]
-		public void PrivatesCanOnlyMoveForward()
+		public void PrivatesCanOnlyMoveForward_Whites()
 		{
 			var board = new Board();
-			Piece piece = board.Add(TeamColor.White, Position._13);
+			Piece piece = board.AddWhite(Positions._44);
 			Assert.IsTrue(piece.Rank == Rank.Private);
 
-			IEnumerable<Move> moves = piece.GetAvailableMoves();
-
-			Assert.Fail();
-
+			IEnumerable<Move> moves = piece.GetAvailableMoves(board);
+			Assert.IsTrue(moves.Count() == 2);
+			Assert.IsTrue(moves.All(m => m.EndPosition.Y > m.StartPosition.Y));
 		}
 
 		[Test]

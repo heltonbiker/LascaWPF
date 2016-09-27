@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace LascaDomain
+namespace Lasca.Domain
 {
 	public class Match
 	{
-		public TeamColor Turn { get; private set; }
+		public TeamType Turn { get; private set; }
 
 
 
@@ -26,15 +22,15 @@ namespace LascaDomain
 		{
 			switch (Turn)
 			{
-				case TeamColor.Black: Turn = TeamColor.White; break;
-				case TeamColor.White: Turn = TeamColor.Black; break;
+				case TeamType.Black: Turn = TeamType.White; break;
+				case TeamType.White: Turn = TeamType.Black; break;
 			}
 		}
 
 		public static Match NewMatch()
 		{
 			Match board = new Match();
-			board.Turn = TeamColor.White;
+			board.Turn = TeamType.White;
 			return board;
 		}
 
