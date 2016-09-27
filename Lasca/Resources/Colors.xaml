@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Lasca">
+
+	<SolidColorBrush x:Key="MainWindowBackground" Color="#FF8EA6C9"/>
+	<SolidColorBrush x:Key="LightBoardColor" Color="#FFECDBA3"/>
+	<SolidColorBrush x:Key="DarkBoardColor" Color="#FF87572F"/>
+
+</ResourceDictionary>

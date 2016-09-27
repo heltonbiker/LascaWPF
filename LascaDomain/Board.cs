@@ -9,9 +9,13 @@ namespace LascaDomain
 {
 	public class Board
 	{
-		public void Place(Piece piece, Position position)
+		List<Piece> _pieces = new List<Piece>();
+
+		public Piece Add(TeamColor teamColor, Position position)
 		{
-			throw new NotImplementedException();
+			var p = new Piece(teamColor, position);
+			_pieces.Add(p);
+			return p;
 		}
 	}
 }

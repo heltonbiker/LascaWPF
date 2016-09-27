@@ -42,7 +42,13 @@ namespace LascaDomain.Tests
 		public void PrivatesCanOnlyMoveForward()
 		{
 			var board = new Board();
-			board.Place(new Piece(TeamColor.White), Position._13);
+			Piece piece = board.Add(TeamColor.White, Position._13);
+			Assert.IsTrue(piece.Rank == Rank.Private);
+
+			IEnumerable<Move> moves = piece.GetAvailableMoves();
+
+			Assert.Fail();
+
 		}
 
 		[Test]

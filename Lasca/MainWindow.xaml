@@ -4,9 +4,108 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lasca.UI"
+		xmlns:System="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+		SizeToContent="WidthAndHeight"
+		WindowStartupLocation="CenterScreen"
+        Title="Play Lasca!">
+
+	<Window.Resources>
+
+		<System:Double x:Key="SquareSize">80</System:Double>
+
+		<Style TargetType="Rectangle">
+			<Setter Property="Width" Value="{StaticResource SquareSize}"/>
+			<Setter Property="Height" Value="{StaticResource SquareSize}"/>
+		</Style>
+		
+		<Style x:Key="SquareStyle" TargetType="Rectangle">
+			<Setter Property="Fill" Value="{StaticResource DarkBoardColor}"/>
+		</Style>
+	</Window.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="{StaticResource MainWindowBackground}" Width="800" Height="600">
+
+		<TextBlock Text="{Binding Name}"/>
+
+		<Border x:Name="Game" Background="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10">
+
+			<Grid x:Name="GameLayers">
+			
+			<UniformGrid x:Name="BoardLayer"
+				Background="{StaticResource LightBoardColor}"
+				Rows="7" Columns="7">
+
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+				<Rectangle Style="{StaticResource SquareStyle}"/>
+				<Rectangle/>
+
+			</UniformGrid>
+
+				<ItemsControl x:Name="PiecesLayer"
+							  ItemsSource="{Binding Pieces}">
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<Canvas/>
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+					<ItemsControl.ItemTemplate>
+						<DataTemplate DataType="{x:Type local:PieceViewModel}">
+							<Ellipse Height="20" Width="40" Fill="{Binding Color}"/>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+				
+			</Grid>
+
+		</Border>
+
+	</Grid>
 </Window>
