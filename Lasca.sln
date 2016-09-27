@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lasca", "Lasca.csproj", "{2E135FA7-A4C0-47C7-8B3F-97B75983A354}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lasca", "Lasca\Lasca.csproj", "{2E135FA7-A4C0-47C7-8B3F-97B75983A354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LascaDomain", "..\LascaDomain\LascaDomain.csproj", "{18079D3B-258C-4B06-8ACA-DE5868942931}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LascaDomain.Tests", "LascaDomain.Tests\LascaDomain.Tests.csproj", "{501AB4C1-BAD3-4B33-AE73-9D3E85690053}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{2E135FA7-A4C0-47C7-8B3F-97B75983A354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E135FA7-A4C0-47C7-8B3F-97B75983A354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E135FA7-A4C0-47C7-8B3F-97B75983A354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18079D3B-258C-4B06-8ACA-DE5868942931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18079D3B-258C-4B06-8ACA-DE5868942931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18079D3B-258C-4B06-8ACA-DE5868942931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18079D3B-258C-4B06-8ACA-DE5868942931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501AB4C1-BAD3-4B33-AE73-9D3E85690053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501AB4C1-BAD3-4B33-AE73-9D3E85690053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501AB4C1-BAD3-4B33-AE73-9D3E85690053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501AB4C1-BAD3-4B33-AE73-9D3E85690053}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
